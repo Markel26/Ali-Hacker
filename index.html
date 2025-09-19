@@ -41,12 +41,27 @@
   .badges{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:0 0 14px}
   .badge{font-size:11px; color:#d8dee9; background:#1a2336; border:1px solid rgba(255,255,255,.08); padding:6px 10px; border-radius:999px}
  
-  <label class="block">اختر لعبتك</label>
-  .games{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+  label.block{display:block; font-weight:600; margin-top:14px; margin-bottom:8px}
+  .games{
+    display:flex;
+    gap:10px;
+  }
+  .game-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
   .game{
-  display:flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px; cursor:pointer;
-  background:#121a2b; border:1px solid rgba(255,255,255,.08);
-  transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 12px;
+    border-radius:12px;
+    cursor:pointer;
+    background:#121a2b;
+    border:1px solid rgba(255,255,255,.08);
+    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
   }
   .game:hover{ transform:translateY(-1px); border-color:rgba(255,255,255,.16); box-shadow:0 8px 20px rgba(0,0,0,.25)}
   .game input{ accent-color:var(--green) }
@@ -173,7 +188,9 @@
   /* Responsive */
   @media (max-width:420px){
   .title{font-size:24px}
-  .games{grid-template-columns:1fr}
+  .games{
+    grid-template-columns: 1fr;
+  }
   }
   </style>
  </head>
@@ -192,11 +209,15 @@
  
   <label class="block">اختر لعبتك</label>
   <div class="games">
-  <label class="game"><input type="radio" name="game" value="Crash" checked> <span class="icon">💥</span> Crash</label>
-  <label class="game"><input type="radio" name="game" value="Aviator"> <span class="icon">✈️</span> Aviator</label>
-  <label class="game"><input type="radio" name="game" value="Mines"> <span class="icon">💎</span> Mines</label>
-  <label class="game"><input type="radio" name="game" value="Chicken Road"> <span class="icon">🐔</span> Chicken Road</label>
-  <label class="game"><input type="radio" name="game" value="Penalty"> <span class="icon">⚽️</span> Penalty</label>
+    <div class="game-column">
+      <label class="game"><input type="radio" name="game" value="Crash" checked> <span class="icon">💥</span> Crash</label>
+      <label class="game"><input type="radio" name="game" value="Aviator"> <span class="icon">✈️</span> Aviator</label>
+      <label class="game"><input type="radio" name="game" value="Penalty"> <span class="icon">⚽️</span> Penalty</label>
+    </div>
+    <div class="game-column">
+      <label class="game"><input type="radio" name="game" value="Mines"> <span class="icon">💎</span> Mines</label>
+      <label class="game"><input type="radio" name="game" value="Chicken Road"> <span class="icon">🐔</span> Chicken Road</label>
+    </div>
   </div>
  
   <label class="block" for="acc">معرف حساب 1xBet</label>
