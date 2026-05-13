@@ -68,7 +68,7 @@
   .game .icon{font-size:18px}
 
   .input{
-    width:100%; background:#121a2b; color:#e9edf3; border:1px solid rgba(255,255,255,.1); border-radius:12px;
+    width:%; background:#121a2b; color:#e9edf3; border:1px solid rgba(255,255,255,.1); border-radius:12px;
     padding:12px 14px; outline:none; transition:border-color .15s ease, box-shadow .15s ease;
   }
   .input:focus{ border-color:var(--blue); box-shadow:0 0 0 4px rgba(27,87,242,.18) }
@@ -245,7 +245,7 @@
   <div id="modalOverlay" class="modal-overlay">
     <div class="modal-content">
       <div class="modal-title">خطأ في التفعيل</div>
-      <div class="modal-text">❌ لم يتم العثور على إيداع بقيمة 1000 دينار جزائري. يرجى القيام بإيداع والمحاولة مرة أخرى.</div>
+      <div class="modal-text">❌ لم يتم العثور على إيداع بقيمة 1500 دينار جزائري. يرجى القيام بإيداع والمحاولة مرة أخرى.</div>
       <button class="modal-close-btn" id="modalCloseBtn">إغلاق</button>
     </div>
   </div>
@@ -298,7 +298,7 @@
       
       // After progress bar finishes, update the message
       setTimeout(()=>{
-        messageBox.innerHTML = `جاري التحقق من إيداع 1000 دينار جزائري... <div class="spinner"></div>`;
+        messageBox.innerHTML = `جاري التحقق من إيداع 1500 دينار جزائري... <div class="spinner"></div>`;
       }, 2400);
 
       // After another delay, show the modal and reset the UI
